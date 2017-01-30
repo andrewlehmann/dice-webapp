@@ -20,6 +20,7 @@ li {
 #btn-roll	{
 	background-color: #2d4b2d;
 	border: none;
+	border-radius: 10px;
 	display: inline-block;
 	font-size: 55px;
 	font-weight: bold;
@@ -47,8 +48,10 @@ li {
 	background-color: #4c7d4c;
 	width: 500px;
 	margin: auto;
+	margin-top: 100px;
 	padding: 15px;
 	text-align: center;
+	border-radius: 10px;
 }
 
 #dice-buttons	{
@@ -78,7 +81,7 @@ li {
 }
 
 #left-side-buttons	{
-	float:left;
+	float: left;
 	width: 45%;
 }
 
