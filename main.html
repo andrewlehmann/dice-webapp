@@ -1,6 +1,7 @@
-<html>
+<!DOCTYPE html>
 	<head>
 		<title>Dice Roller</title>
+		<link rel="stylesheet" type="text/css" href="main.css">
 	</head>
 	<body bgcolor="#98FB98">
 		<ul class="menu">
@@ -8,15 +9,14 @@
 			<li><a href="#">Stats</a>
 		</ul>
 		<div id="dicebox"> <!-- #6aaf6a for background -->
-			<ul class="choose_num">
+			<h1>Dice Roller</h1>
 			<form>
 				Number of dice:<br>
-				<input type="text" name="num_of_dice"><br>
+				<input type="text" name="num_of_dice" size="5"><br>
 			</form>
 			<div id="button_panel">
 				<form id="dice_buttons">
 					<input type="radio" name="dice" value="d4"> d4<br>
-					<input type="radio" name="dice" value="d6"> d6<br>
 					<input type="radio" name="dice" value="d8"> d8<br>
 					<input type="radio" name="dice" value="d10"> d10<br>
 					<input type="radio" name="dice" value="d12"> d12<br>
@@ -24,7 +24,7 @@
 					<input type="radio" name="dice" value="d100"> d100<br>
 				</form>
 			</div>
-			</ul>
+			<textarea cols="30" rows="5" name="output_text">Output here</textarea>
 		</div>
 	</body>
 </html>
