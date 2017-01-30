@@ -1,2 +1,23 @@
 *	{
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	color: white;
+}
+
+#dicebox	{
+	background-color: #5b965b;
+	width: 500px;
+	margin: auto;
+	padding: 15px;
+}
+
+#output	{
+	color: black;
+}
+
+h1	{
+	text-align: center;
+}
+
+#dice-buttons	{
+	padding-top: 20px;
+}
