@@ -3,6 +3,10 @@
 	color: white;
 }
 
+h1	{
+	text-align: center;
+}
+
 #dicebox	{
 	background-color: #5b965b;
 	width: 500px;
@@ -10,14 +14,24 @@
 	padding: 15px;
 }
 
-#output	{
-	color: black;
-}
-
-h1	{
-	text-align: center;
-}
-
 #dice-buttons	{
 	padding-top: 20px;
+	padding-bottom: 20px;
 }
+
+#output	{
+	color: black;
+	display: inline-block;
+	margin-left: 200px;
+}
+
+#btn-roll	{
+	background-color: #3c643c;
+	font-size: 24px;
+	font-weight: bold;
+	padding: 5px;
+	margin: 10px;
+}
+
+
+
