@@ -4,32 +4,40 @@
 		<link rel="stylesheet" type="text/css" href="main.css">
 	</head>
 	<body bgcolor="#79c879">
-		<ul class="menu">
-			<li><a href="#">Dice</a>
-			<li><a href="#">Stats</a>
-		</ul>
 		<div id="dicebox" class="container"> <!-- #6aaf6a for background -->
 			<h1>Dice Roller</h1>
+			<ul class="menu">
+				<li><a href="stats.html">View statistics</a>
+			</ul>
 			<div id="left-side" class="container">
-				<form>
-					Number of dice:<br>
-					<input type="text" name="num-of-dice" size="5"><br>
-				</form>
-				<div id="button-panel">
-					<form id="dice-buttons">
-						<input type="radio" name="dice" value="d4"> d4<br>
-						<input type="radio" name="dice" value="d8"> d8<br>
-						<input type="radio" name="dice" value="d10"> d10<br>
-						<input type="radio" name="dice" value="d12"> d12<br>
-						<input type="radio" name="dice" value="d20" checked> d20<br>
-						<input type="radio" name="dice" value="d100"> d100<br>
+				<div id="left-side-inner">
+					<h3>Choose Dice</h3>
+					<form id="form1">
+						<label for="num-of-dice">Num of dice:</label>
+						<input type="text" name="num-of-dice" size="5" id="dice-count-field"><br>
 					</form>
+					<div id="button-panel">
+						<form id="dice-buttons">
+							<div id="left-side-buttons">
+								<input type="radio" name="dice" value="d4"> d4<br>
+								<input type="radio" name="dice" value="d6"> d6<br>
+								<input type="radio" name="dice" value="d8"> d8<br>
+								<input type="radio" name="dice" value="d10"> d10<br>
+							</div>
+							<div id="right-side-buttons">
+								<input type="radio" name="dice" value="d12"> d12<br>
+								<input type="radio" name="dice" value="d20" checked> d20<br>
+								<input type="radio" name="dice" value="d100"> d100<br>
+							</div>
+						</form>
+					</div>
 				</div>
-				<button id="btn-roll" type="button">Roll</button>
 			</div>
 			<div id="right-side">
-				<textarea id="output" cols="30" rows="8" name="output_text">Output here</textarea>
+				<h3 id="textbox-title">Roll History</h3>
+				<textarea id="output" cols="18" rows="8" name="output_text">Output here</textarea>
 			</div>
+			<button id="btn-roll" type="button">Roll</button>
 		</div>
 	</body>
 </html>
