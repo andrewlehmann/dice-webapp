@@ -5,10 +5,11 @@ function rollDice()	{
 	var returnString;
 	var value;
 	var results = [];
-	console.log("beginning js");
+	console.log(numOfDice);
+	console.log("sides: " + sides);
 	for(var i =0; i<numOfDice; i++)	{
-		value = Math.ceil(Math.random()) % sides;
-		// push value into database
+		value = Math.ceil(Math.random() * (sides - 1) + 1);
+		console.log(value.toString());
 		results.push(value);
 	}
 	if(results.length === 1)	{
@@ -17,12 +18,13 @@ function rollDice()	{
 		return;
 	}
 	else  {
-		for(var i = 0; i < results.length; i++)	{
-			returnString += results[i].toString() + ' + ';
+			returnString = results[0].toString();
+		for(var i = 1; i < results.length; i++)	{
+			returnString +=  ' + ' + results[i].toString();
 		}
 		returnString += ' = ' + results.reduce(function(total, num) { return total + num;});
 		printResults(returnString);
-		document.getElementById('dice-count-field').value = "";
+		//document.getElementById('dice-count-field').value = "";
 		console.log("2 dice");
 		return;
 	}
