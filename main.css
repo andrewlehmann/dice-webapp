@@ -64,6 +64,7 @@ li {
 #dice-count-field	{
 	background-color: #e0fde0;
 	color: black;
+	font-weight: bold;
 	text-align: center;
 }
 
@@ -94,11 +95,13 @@ li {
 	background-color: #e0fde0;
 	color: black;
 	display: inline-block;
+	font-weight: bold;
 	margin-left: 260px;
 	margin-top: -78px;
 	margin-bottom: 50px;
 	font-size: 14px;
 	resize: none;
+	text-align: center;
 	width: 35%;
 }
 
