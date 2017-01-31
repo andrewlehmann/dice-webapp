@@ -39,9 +39,9 @@ function getRadioVal(form, name)	{ //gets the value of the checked radio button
 function createString(results, returnString) { // creates the string of output to be placed in text box
 	for(var i = 1; i < results.length; i++)	{
 			returnString +=  ' + ' + results[i].toString();
-		}	//get the sum of all the elements of the array, and append to the end of the return string
-		returnString += ' = ' + results.reduce(function(total, num) { return total + num;});
-		return returnString;
+	}	//get the sum of all the elements of the array, and append to the end of the return string
+	returnString += ' = ' + results.reduce(function(total, num) { return total + num;});
+	return returnString;
 }
 
 function printResults(resultString)	{	//puts return string in the text box
