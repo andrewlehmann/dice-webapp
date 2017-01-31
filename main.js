@@ -10,12 +10,12 @@ function rollDice()	{
 		value = Math.floor(Math.random() * (sides) + 1);
 		results.push(value);
 	}
+	returnString = results[0].toString();
 	if(results.length === 1)	{
-		printResults(results[0].toString());
+		printResults(returnString);
 		return;
 	}
 	else  {
-		returnString = results[0].toString();
 		returnString = createString(results, returnString);
 		printResults(returnString);
 		//document.getElementById('dice-count-field').value = "";
