@@ -27,7 +27,7 @@ function getRadioVal(form, name)	{ //gets the value of the checked radio button
 
 	var val;
 	var input = document.getElementsByName("dice"); //get radio buttons
-	var inputList = Array.prototype.slice.call(input);
+	var inputList = Array.prototype.slice.call(input); //convert NodeList to array
 	for (var i = 0; i < inputList.length; i++)	{
 		if(inputList[i].checked)	{
 			val = inputList[i].value;
