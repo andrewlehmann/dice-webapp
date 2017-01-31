@@ -23,14 +23,6 @@ function rollDice()	{
 	}
 }
 
-function createString(results, returnString) {
-	for(var i = 1; i < results.length; i++)	{
-			returnString +=  ' + ' + results[i].toString();
-		}
-		returnString += ' = ' + results.reduce(function(total, num) { return total + num;});
-		return returnString;
-}
-
 function getRadioVal(form, name)	{
 
 	var val;
@@ -42,6 +34,14 @@ function getRadioVal(form, name)	{
 		}
 	}
 	return val;
+}
+
+function createString(results, returnString) {
+	for(var i = 1; i < results.length; i++)	{
+			returnString +=  ' + ' + results[i].toString();
+		}
+		returnString += ' = ' + results.reduce(function(total, num) { return total + num;});
+		return returnString;
 }
 
 function printResults(resultString)	{
