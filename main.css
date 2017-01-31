@@ -62,6 +62,7 @@ li {
 }
 
 #dice-count-field	{
+	background-color: #e0fde0;
 	color: black;
 	text-align: center;
 }
@@ -90,6 +91,7 @@ li {
 	float: right;
 }
 #output	{
+	background-color: #e0fde0;
 	color: black;
 	display: inline-block;
 	margin-left: 260px;
