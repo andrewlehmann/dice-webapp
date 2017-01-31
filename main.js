@@ -1,7 +1,7 @@
 function rollDice()	{
 
 	var numOfDice = document.getElementById('dice-count-field').value;
-	var sides = getRadioVal(document.getElementById('form1'), 'dice');
+	var sides = getRadioVal(document.getElementById('form1'), 'dice'); //# of sides on the chosen die
 	var returnString;
 	var value;
 	var results = [];
@@ -11,11 +11,11 @@ function rollDice()	{
 		results.push(value);	//append to an array of the results
 	}
 	returnString = results[0].toString(); //initialize return string to first roll's result
-	if(results.length === 1)	{
+	if(results.length === 1)	{ //if only one die, print now
 		printResults(returnString);
 		return;
 	}
-	else  {
+	else  { //if more than one die, begin creating return string
 		returnString = createString(results, returnString);
 		printResults(returnString);
 		//document.getElementById('dice-count-field').value = "";
@@ -23,7 +23,7 @@ function rollDice()	{
 	}
 }
 
-function getRadioVal(form, name)	{
+function getRadioVal(form, name)	{ //gets the value of the checked radio button
 
 	var val;
 	var input = document.getElementsByName("dice"); //get radio buttons
