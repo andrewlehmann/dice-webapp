@@ -7,7 +7,7 @@ function rollDice()	{
 	var results = [];
 	console.log("beginning js");
 	for(var i =0; i<numOfDice; i++)	{
-		value = Math.random() % sides;
+		value = Math.ceil(Math.random()) % sides;
 		// push value into database
 		results.push(value);
 	}
@@ -20,10 +20,10 @@ function rollDice()	{
 		for(var i = 0; i < results.length; i++)	{
 			returnString += results[i].toString() + ' + ';
 		}
-		returnString += ' = ' + results.reduce(add, 0);
+		returnString += ' = ' + results.reduce(function(total, num) { return total + num;});
 		printResults(returnString);
 		document.getElementById('dice-count-field').value = "";
-		console.log("2 die");
+		console.log("2 dice");
 		return;
 	}
 }
@@ -31,12 +31,12 @@ function rollDice()	{
 function getRadioVal(form, name)	{
 
 	var val;
-	var radios = form.elements[name];
+	var input = document.getElementsByName("dice");
 	console.log("inside getRadioVal");
-	for (var i=0; i<radios.length; i++)	{
-		if (radios[i].checked)	{
-			val = radios[i].value;
-			break;
+	var inputList = Array.prototype.slice.call(input);
+	for (var i = 0; i < inputList.length; i++)	{
+		if(inputList[i].checked)	{
+			val = inputList[i].value;
 		}
 	}
 	return val;
